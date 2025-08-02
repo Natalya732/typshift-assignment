@@ -24,12 +24,11 @@ export default function Home() {
             >
               View Our Services
             </Link>
-            <Link
+            <span
               className="rounded-full border border-solid border-border dark:border-gray-700 transition-colors flex items-center justify-center hover:bg-accent hover:text-accent-foreground font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto text-foreground dark:text-white"
-              href="/contact"
             >
               Get in Touch
-            </Link>
+            </span>
           </div>
         </main>
         <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">

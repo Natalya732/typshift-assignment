@@ -54,12 +54,10 @@ export function Hero() {
 
           <motion.div variants={heroAnimations.itemVariants}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-              <Link href={"#services"}>
-                <button className=" cursor-pointer group relative px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/25 w-full sm:w-auto">
+                <Link href={"#services"} className=" cursor-pointer group relative px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/25 w-full sm:w-auto">
                   <span className="relative z-10">Explore Our Services</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
-              </Link>
+                </Link>
               <button className="cursor-pointer group px-8 py-4 border-2 border-border text-foreground rounded-full font-semibold text-lg hover:border-primary hover:text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/5 w-full sm:w-auto">
                 View Case Studies
                 <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
