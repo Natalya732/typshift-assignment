@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-secondary: var(--font-space-grotesk);
+  --font-primary: var(--font-lexend);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* TypeShift Brand Colors */
+  --color-black: #000000;
+  --color-orange: #fc6605;
+  --color-white: #ffffff;
+  --color-accent-blue: #0200cd;
+  --color-accent-violet: #18026f;
+
+  /* Light Mode - Using Brand Colors */
+  --radius: 0.625rem;
+  --background: var(--color-white);
+  --foreground: var(--color-black);
+  --card: var(--color-white);
+  --card-foreground: var(--color-black);
+  --popover: var(--color-white);
+  --popover-foreground: var(--color-black);
+  --primary: var(--color-orange);
+  --primary-foreground: var(--color-white);
+  --secondary: var(--color-accent-blue);
+  --secondary-foreground: var(--color-white);
+  --muted: #f8f9fa;
+  --muted-foreground: #6c757d;
+  --accent: var(--color-accent-violet);
+  --accent-foreground: var(--color-white);
+  --destructive: #dc3545;
+  --border: #e9ecef;
+  --input: #e9ecef;
+  --ring: var(--color-orange);
+  --chart-1: var(--color-orange);
+  --chart-2: var(--color-accent-blue);
+  --chart-3: var(--color-accent-violet);
+  --chart-4: #28a745;
+  --chart-5: #ffc107;
+  --sidebar: var(--color-white);
+  --sidebar-foreground: var(--color-black);
+  --sidebar-primary: var(--color-orange);
+  --sidebar-primary-foreground: var(--color-white);
+  --sidebar-accent: var(--color-accent-blue);
+  --sidebar-accent-foreground: var(--color-white);
+  --sidebar-border: #e9ecef;
+  --sidebar-ring: var(--color-orange);
+}
+
+.dark {
+  /* Dark Mode - Using Brand Colors with Dark Adaptations */
+  --background: #0a0a0a;
+  --foreground: var(--color-white);
+  --card: #1a1a1a;
+  --card-foreground: var(--color-white);
+  --popover: #1a1a1a;
+  --popover-foreground: var(--color-white);
+  --primary: var(--color-orange);
+  --primary-foreground: var(--color-black);
+  --secondary: var(--color-accent-blue);
+  --secondary-foreground: var(--color-white);
+  --muted: #2a2a2a;
+  --muted-foreground: #a0a0a0;
+  --accent: var(--color-accent-violet);
+  --accent-foreground: var(--color-white);
+  --destructive: #ff6b6b;
+  --border: #333333;
+  --input: #333333;
+  --ring: var(--color-orange);
+  --chart-1: var(--color-orange);
+  --chart-2: var(--color-accent-blue);
+  --chart-3: var(--color-accent-violet);
+  --chart-4: #51cf66;
+  --chart-5: #ffd43b;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: var(--color-white);
+  --sidebar-primary: var(--color-orange);
+  --sidebar-primary-foreground: var(--color-black);
+  --sidebar-accent: var(--color-accent-blue);
+  --sidebar-accent-foreground: var(--color-white);
+  --sidebar-border: #333333;
+  --sidebar-ring: var(--color-orange);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    font-family: var(--font-lexend);
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease-in-out infinite alternate;
+}
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
